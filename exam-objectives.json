@@ -1,0 +1,93 @@
+[
+	{
+		"domain": "Cloud Concepts",
+		"objectives": [
+			{
+				"id": "1.1",
+				"objective": "Define the AWS Cloud and its value proposition",
+				"subtopics": [
+					{"subtopic": "Define the benefits of the AWS cloud",
+					"details": [
+						{"detail": "Security"},
+						{"detail": "Reliability"},
+						{"detail": "High Availability"},
+						{"detail": "Elasticity"},
+						{"detail": "Agility"},
+						{"detail": "Pay-as-you go pricing"},
+						{"detail": "Scalability"},
+						{"detail": "Global Reach"},
+						{"detail": "Economy of scale"}
+					]
+					},
+					{"subtopic": "Explain how the AWS cloud allows users to focus on business value",
+					"details": [
+						{"detail": "Shifting technical resources to revenue-generating activities as opposed to managing infrastructure"}
+					]
+					}
+				]
+			},
+			{
+				"id": "1.2",
+				"objective": "Identify aspects of AWS Cloud economics",
+				"subtopics": [
+					{"subtopic": "Define items that would be part of a Total Cost of Ownership proposal",
+					"details": [
+						{"detail": "Understand the role of operational expenses (OpEx) "},
+						{"detail": "Understand the role of capital expenses (CapEx)"},
+						{"detail": "Understand labor costs associated with on-premises operations"},
+						{"detail": "Understand the impact of software licensing costs when moving to the cloud"}
+					]
+					},
+					{"subtopic": "Identify which operations will reduce costs by moving to the cloud",
+					"details": [
+						{"detail": "Right-sized infrastructure"},
+						{"detail": "Benefits of automation"},
+						{"detail": "Reduce compliance scope (for example, reporting)"},
+						{"detail": "Managed services (for example, RDS, ECS, EKS, DynamoDB)"}
+					]
+					}
+				]
+			},
+			{
+				"id": "1.3",
+				"objective": "Explain the different cloud architecture design principles",
+				"subtopics": [
+					{"subtopic": "Explain the design principles",
+					"details": [
+						{"detail": "Design for failure"},
+						{"detail": "Decouple components versus monolithic architecture"},
+						{"detail": "Implement elasticity in the cloud versus on-premises"},
+						{"detail": "Think parallel"}
+					]
+					}
+				]
+			}
+		]
+	},
+
+	{
+		"domain": "Security and Compliance",
+		"objectives": [{
+				"id": "2.1",
+				"objective": "Define the AWS shared responsibility model",
+				"subtopics": [
+					{"subtopic": "Recognize the elements of the Shared Responsibility Model"},
+					{"subtopic": "Describe the customer’s responsibly on AWS",
+					"details": [
+						{"detail": "Describe how the customer’s responsibilities may shift depending on the service used(for example with RDS, Lambda, or EC2)"}
+					]
+					},
+					{"subtopic": "Describe AWS responsibilities"}
+				]
+			},
+			{
+				"id": "1.2",
+				"objective": "Identify aspects of AWS Cloud economics"
+			},
+			{
+				"id": "1.3",
+				"objective": "Explain the different cloud architecture design principles"
+			}
+		]
+	}
+]
