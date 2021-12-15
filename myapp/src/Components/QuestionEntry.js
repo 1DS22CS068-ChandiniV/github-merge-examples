@@ -19,10 +19,11 @@ class QuestionEntry extends React.Component {
 			time: "0",
 			certification: "AWS",
 			image: "",
-			objectives: [{'index':'1.1', 'title':'learn things'},{'index':'1.2', 'title':'learn morethings'}],
 			
+			objectives: require('../objectives.json'),
 			
 		};
+		console.log(this.state.objectives);
     }   
   
   save(){
@@ -73,55 +74,71 @@ class QuestionEntry extends React.Component {
 	
 	
 			<div class="container">
-<br/>
+  <br />
+
+  <div class="card">
+    <div class="card-header" id="questionNumber">
+      Question
+    </div>
+
+    <div class="card-body">
+	
+	<div class="row">
+	<div class="col-8">
+
+      <h3 class="card-title" id="query">
+        This is the exam page.
+      </h3>
+
+
+
+      Query: <input type="text" className="form-control" name="query" value={this.state.query} onChange={(event)=>this.setState({query: event.target.value})}></input><br />
+
+      <input class="form-check-input  option-radio " type="checkbox" name="optionRadios" value="0" checked={this.state.options[0].selected} onClick={()=> this.toggleOption(0)}
+      ></input>
+      <input type="text" className="form-control" name="optiona" value={this.state.options[0].text} onChange={(event)=>this.optionChangedHandler(event, 0)}></input><br />
+
+      <input class="form-check-input  option-radio " type="checkbox" name="optionRadios" value="0" checked={this.state.options[1].selected} onClick={()=> this.toggleOption(1)}
+      ></input>
+      <input type="text" className="form-control" name="optionb" value={this.state.options[1].text} onChange={(event)=>this.optionChangedHandler(event, 1)}></input><br />
+
+      <input class="form-check-input  option-radio " type="checkbox" name="optionRadios" value="0" checked={this.state.options[2].selected} onClick={()=> this.toggleOption(2)}
+      ></input>
+      <input type="text" className="form-control" name="optionc" value={this.state.options[2].text} onChange={(event)=>this.optionChangedHandler(event, 2)}></input><br />
+
+      <input class="form-check-input  option-radio " type="checkbox" name="optionRadios" value="0" checked={this.state.options[3].selected} onClick={()=> this.toggleOption(3)}
+      ></input>
+      <input type="text" className="form-control" name="optiond" value={this.state.options[3].text} onChange={(event)=>this.optionChangedHandler(event, 3)}></input><br />
+
+
+      <div>
+        <p><a onClick={()=>this.save()}>save</a></p>
+      </div>
+
+	</div>
+	<div class="col-4">
+	
+	abc
+	{this.state.options[3].text}
+
 			
-						<div class="card">
-			   <div class="card-header" id="questionNumber">
-				  Question 
-			   </div>
 			
-						<div class="card-body">
-
-			   <h3 class="card-title" id="query"> 
-				  This is the exam page.
-			   </h3>
-			
-			
-			
-Query: <input  type="text"  className="form-control"  name="query" 		value={this.state.query}  			onChange={(event)=>this.setState({query: event.target.value})}></input><br/>
-
-<input class="form-check-input  option-radio " type="checkbox" name="optionRadios"  value="0"
- checked={this.state.options[0].selected} 
- onClick={() => this.toggleOption(0)} 
-></input>
-<input  type="text"  className="form-control"  name="optiona" value={this.state.options[0].text}  onChange={(event)=>this.optionChangedHandler(event, 0)}></input><br/>
-
-<input class="form-check-input  option-radio " type="checkbox" name="optionRadios"  value="0"
- checked={this.state.options[1].selected} 
- onClick={() => this.toggleOption(1)} 
-></input>
-<input  type="text"  className="form-control"  name="optionb" value={this.state.options[1].text}  onChange={(event)=>this.optionChangedHandler(event, 1)}></input><br/>
-
-<input class="form-check-input  option-radio " type="checkbox" name="optionRadios"  value="0"
- checked={this.state.options[2].selected} 
- onClick={() => this.toggleOption(2)} 
-></input>
-<input  type="text"  className="form-control"  name="optionc" value={this.state.options[2].text}  onChange={(event)=>this.optionChangedHandler(event, 2)}></input><br/>
-
-<input class="form-check-input  option-radio " type="checkbox" name="optionRadios"  value="0"
- checked={this.state.options[3].selected} 
- onClick={() => this.toggleOption(3)} 
-></input>
-<input  type="text"  className="form-control"  name="optiond" value={this.state.options[3].text}  onChange={(event)=>this.optionChangedHandler(event, 3)}></input><br/>
+			{this.state.objectives[0].objectives[0].subtopics[0].subtopic}
 
 
-			<div >
-			<p><a onClick={()=>this.save()}>save</a></p>
-			</div>
+				  
 
+	
 
- 
-			</div></div></div>
+	
+	
+	</div>
+
+</div>
+
+    </div>
+  </div>
+</div>
 
     );
   }
